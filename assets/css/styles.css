@@ -53,6 +53,7 @@ body {
   border-radius: 4rem;
   padding: 10px;
   overflow: hidden;
+  transition: width .5s cubic-bezier(.9, 0, .3, .9);
 }
 
 .search__input{
@@ -88,6 +89,7 @@ body {
   display: grid;
   place-items: center;
   cursor: pointer;
+  transition: transform .6s cubic-bezier(.9, 0, .3, .9);
 }
 
 .search__icon,
@@ -95,6 +97,7 @@ body {
   color: var(--white-color);
   font-size: 1.5rem;
   position: absolute;
+  transition: oacity .5s cubic-bezier(.9, 0, .3, .9);
 }
 
 .search__close{
@@ -102,7 +105,26 @@ body {
 }
 
 /* Search animated */
+.show-search{
+  width: 100%;
+}
 
+.show-search .search__input{
+  opacity: 1;
+  pointer-events: initial;
+}
+
+.show-search .search__button{
+  transform: rotate(90deg);
+}
+
+.show-search .search__icon{
+  opacity: 0;
+}
+
+.show-search .search__close{
+  opacity: 1;
+}
 
 /*=============== BREAKPOINTS ===============*/
 /* For medium devices */
